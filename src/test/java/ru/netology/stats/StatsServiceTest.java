@@ -1,5 +1,6 @@
 
 package ru.netology.stats;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
@@ -32,31 +33,34 @@ public class StatsServiceTest {
         int expected = 7;
         assertEquals(expected, actual);
     }
+
     @Test
-    public  void shouldFindMin() {
+    public void shouldFindMin() {
         StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long actual = service.minSales(sales);
         long expected = 9;
         assertEquals(expected, actual);
     }
+
     @Test
-    public  void shouldFindAboveAverage() {
+    public void shouldFindAboveAverage() {
         StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long actual = service.aboveAverage(sales);
-        long expected =  5;
+        long expected = 5;
         assertEquals(expected, actual);
 
     }
-@Test
+
+    @Test
     public void shouldFindBelowAverage() {
-    StatsService service = new StatsService();
-    long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-    long actual = service.belowAverage(sales);
-    long expected = 5;
-    assertEquals(expected, actual);
-}
+        StatsService service = new StatsService();
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long actual = service.belowAverage(sales);
+        long expected = 5;
+        assertEquals(expected, actual);
+    }
 
 
 }
